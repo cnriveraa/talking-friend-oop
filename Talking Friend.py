@@ -41,7 +41,7 @@ def main_menu():
         print("4. Speak text")
         print("5. Exit")
 
-        choice == input("Choose an option (1-5): ")
+        choice = input("Choose an option (1-5): ")
 
         if choice == '1':
             set_rate(friend)
