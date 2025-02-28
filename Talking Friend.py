@@ -14,14 +14,14 @@ def set_rate(friend):
 def set_volume(friend):
     volume = friend.getProperty('volume')   # getting to know current volume level
     print("Current volume level: {volume}")
-    new_volume = int(input("Enter new volume level (0 to 1, default is 1)") or 1)
+    new_volume = int(input("Enter new volume level (0 to 1, default is 1): ") or 1)
     friend.setProperty('volume', new_volume)        # setting up volume level  between 0 and 1
 
 def set_voice(friend):
     voices = friend.getProperty('voices')       # getting details of current voice
     print("Available voices:")
     for index, voice in enumerate(voices):
-        print("{index}: {voice.name}")
+        print(f"{index}: {voice.name}")
     voice_index = int(input("Enter voice index (o for male, 1 for female): ") or 0)
     friend.setProperty('voice', voices[voice_index].id)  # changing voice
 
